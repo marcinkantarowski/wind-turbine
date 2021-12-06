@@ -139,7 +139,7 @@ const TurbinesTable = () => {
                                     }
                                     setVisible(false);
                                 } else {
-                                    alert("Efficiency must be a number between 0-100,<br>Height must be a number between 1-1000");
+                                    alert("Efficiency must be a number between 0-100, Height must be a number between 1-1000");
                                 }
                             }
                         }

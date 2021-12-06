@@ -44,18 +44,6 @@ class TurbineRequest extends FormRequest
 
         $turbine->save();
 
-        $setOfElements = [];
-        for($i=1; $i<=100; $i++) {
-            $single = [
-                'turbine_id' => $turbine->id,
-                'element_number' => $i,
-                'element_name' => 'Element_' . $i
-            ];
-            $setOfElements[] = $single;
-        }
-
-        Element::insert($setOfElements);
-
         return $turbine;
     }
 }

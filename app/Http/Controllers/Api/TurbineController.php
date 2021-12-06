@@ -31,6 +31,17 @@ class TurbineController extends Controller
     {
         $turbine = $request->persist(new Turbine());
 
+        $setOfElements = [];
+        for($i=1; $i<=100; $i++) {
+            $single = [
+                'turbine_id' => $turbine->id,
+                'element_number' => $i,
+                'element_name' => 'Element_' . $i
+            ];
+            $setOfElements[] = $single;
+        }
+        Element::insert($setOfElements);
+
         return response()->json(new TurbineResource($turbine));
     }
 
