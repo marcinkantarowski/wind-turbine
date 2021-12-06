@@ -15,8 +15,6 @@ import {
 
 const InspectionData = ({data}) => {
 
-    console.log(data);
-
     data.forEach(item => {
 
         switch(true) {
